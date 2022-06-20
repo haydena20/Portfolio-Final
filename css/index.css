@@ -1,0 +1,140 @@
+#sidebar 
+{
+    position:absolute;
+    height:100%;
+    width:20%;
+    background: linear-gradient(90deg, rgba(35,39,42,1) 25%, rgba(44,47,51,1) 55%);
+    border:rgb(93, 94, 109);
+    border:rgb(6, 91, 248);
+    border-width: 0.25vw;
+    border-style: ridge;
+    border-radius: -5%;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    top: 0;
+    z-index: 2;
+}
+body
+{
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+}
+h2
+{
+    font-size: 1.8vw;
+    margin-left: 10%;
+}
+a
+{
+    display: block;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-align: right;
+
+    transition: background-color ease-in-out 0.25s, border-radius ease-in 0.1s;
+}
+#nav
+{
+    display: grid;
+    position: absolute;
+    grid-template-rows: repeat(6, auto);
+    gap: 3vh;
+    height: 50%;
+}
+#altNav
+{
+    display: grid;
+    position:absolute;
+    height: 100vh;
+    margin-top: 0;
+    grid-template-rows: repeat(6, auto);
+    gap: 3vh;
+    visibility: hidden;
+}
+#logo
+{
+    background-image: url("../img/logo.png");
+    width: 60%;
+    height: 0;
+    padding-bottom: 60%;
+
+    background-size:contain;
+    background-position:center;
+    border-radius:50%;
+
+    margin-left: 25%;
+}
+#logo:after 
+{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+#mainContent
+{
+    margin-left: 20%;
+    top: 0;
+    width: 65%; 
+    height: 100%;
+    position: absolute;
+    border: 0;
+}
+@media (max-width: 850px)
+{
+    #sidebar
+    { 
+        left: 0%; 
+        width: 15%; 
+    }
+    #nav
+    { visibility: hidden; }
+    #altNav
+    { visibility: visible; }
+    a
+    {
+        font-size: 35px;
+        text-align: center;
+    }
+    #logo
+    {
+        width: 85%;
+        height: 0;
+        padding-bottom: 85%;
+        margin-left: 0%;
+        margin-top: 100%;
+    }
+    #mainContent
+    {
+        width: 85%; 
+        margin-left: 14%;
+    }
+}
+a:hover
+{
+    background-color: rgba(255, 255, 255, 0.082);
+    border-style: groove;
+    border-radius: 10%;
+}
+a:active
+{
+    background-color: rgba(255, 255, 255, 0.082);
+    border-style: groove;
+    border-radius: 10%;
+}
+.sidebarContent
+{
+    margin-top: 25%;
+    margin-left: 40%;
+    text-align: center;
+}

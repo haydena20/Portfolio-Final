@@ -1,0 +1,42 @@
+body
+{
+    color: white;
+    margin: 0;
+    left: 0;
+    top: 0;
+    border-style: groove;
+    border-width: 0.25vw;
+    border-radius: 1vw;
+    border-color: rgb(93, 94, 109);
+}
+h2
+{
+    margin: 1vw;
+}
+p
+{
+    display: block;
+    height: 100%;
+    text-indent: 15px;
+    word-wrap: break-word;
+    margin: 1.5vw;
+}
+img
+{
+    align-items: right;
+    word-wrap: break-word;
+    width: 45vw;
+    height: auto;
+    float: right;
+}
+
+/* Custom Scrollbar using WebKit */
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: rgb(99, 99, 99);
+}
