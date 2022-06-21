@@ -61,6 +61,7 @@ a
     grid-template-rows: repeat(6, auto);
     gap: 3vh;
     visibility: hidden;
+    margin-right: 10%;
 }
 #logo
 {

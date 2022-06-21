@@ -82,7 +82,7 @@ p
 #secondPage
 {
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 55% 45%;
     text-align: center;
 }
 #aboutMeUpper
@@ -96,17 +96,111 @@ p
     width: 99%;
     overflow: hidden;
     z-index: 0;
+    border-right: rgba(0, 0, 0, 0.1) solid 0.2vh;
+    border-left: rgba(0, 0, 0, 0.1) solid 0.1vh;
 }
 #aboutMeSlider
 {
-    display:grid;
-    border-top: rgba(0, 0, 0, 0.2) 0.1vh solid;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
     background-color: rgba(44,47,51,1);
 }
 #aboutMeSlider > div
 {
+    margin: 3%;
+    height: 95%;
+    width: 90%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: rgba(6, 91, 248, 1) 0.2vh ridge;
+    border-right: rgba(6, 91, 248, 1) 0.2vh ridge;
+}
+#aboutMeSlider > div > p
+{
+    text-align: center;
+}
+#thirdPage
+{
+    display: grid;
+    grid-template-columns: 90%, 10%;
+    gap: 5%;
+}
+#projectFrame
+{
+    grid-column-start: 1;
+    width: 100%;
+    height: 99%;
+    border: none;
+}
+#projectsList
+{  
+    grid-column-start: 2;
     height: 100%;
-    width: 25%;
+
+    display: grid;
+    grid-auto-rows: 10%;
+    overflow:scroll;
+    gap: 5%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#projectsList > a
+{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.022);
+    border-left: rgba(255, 106 , 0, 1) 0.2vw solid;
+}
+#projectsList > a:hover
+{
+    background-color: rgba(255, 255, 255, 0.082);
+}
+#fourthPage
+{
+    display: grid;
+    grid-template-rows: 20% auto;
+    text-align: center;
+}
+#contactGrid
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 3%;
+    margin: 3%;
+    margin-left: 0;
+}
+#contactGrid > div
+{
+    background-color: rgba(255, 255, 255, 0.022);
+    border-top: rgba(255, 106 , 0, 1) 0.2vh ridge;
+    border-left: rgba(255, 106 , 0, 1) 0.2vh ridge;
+    border-bottom: rgba(6, 91, 248, 1) 0.2vh ridge;
+    border-right: rgba(6, 91, 248, 1) 0.2vh ridge;
+    border-radius: 25%;
+
+}
+#contactGrid > div:hover
+{
+    background-color: rgba(255, 255, 255, 0.082);
+}
+#contactGrid > div > a
+{
+    text-decoration: none;
+    font-size: 1em;
+}
+#contactGrid > div > a > img
+{
+    display: block;
+    margin-top: 30%;
+    margin-left: 35%;
+    height: 30%;
+    width: 30%;
 }
 #hero
 {
@@ -116,7 +210,7 @@ p
     left: 0;
     height: 70%;
     background-image: url("../img/photo-1438401171849-74ac270044ee.png");
-    background-size:cover;
+    background-size: cover;
     z-index: 1;
 }
 #heading
@@ -182,4 +276,9 @@ h3::before
 ::-webkit-scrollbar-thumb 
 {
     background: rgb(99, 99, 99);
+}
+
+::-webkit-scrollbar-corner
+{
+    visibility: hidden;
 }
